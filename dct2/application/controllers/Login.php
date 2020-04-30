@@ -1,23 +1,4 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-
-class Login extends CI_Controller {
-
-    function __construct() { 
-    
-        parent::__construct(); 
-        $this->load->helper('form');
-        $this->load->database(); 
-        $this->load->model('model');
-
-    }
-	public function index()
-    {	
-        $this->load->view('login');
-	}
-	public function chklogin()
-    {
-        $user = $this->input->post('username');
+>input->post('username');
         $pass = $this->input->post('password');
   
         $data= $this->model->getuser($user,$pass);
